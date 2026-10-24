@@ -1,4 +1,4 @@
-const section=(id,n,title,body)=>`<section class="research-section" id="${id}"><div class="research-kicker">${n} / BAGEL BROS</div><h2>${title}</h2>${body}</section>`;
+const section=(id,n,title,body)=>`<section class="research-section" id="${id}"><div class="research-kicker">${n}</div><h2>${title}</h2>${body}</section>`;
 const table=(heads,rows)=>`<div class="research-table" tabindex="0" role="region" aria-label="${heads.join(', ')}"><table><thead><tr>${heads.map(h=>`<th scope="col">${h}</th>`).join('')}</tr></thead><tbody>${rows.map(r=>`<tr>${r.map((v,i)=>i?`<td>${v}</td>`:`<th scope="row">${v}</th>`).join('')}</tr>`).join('')}</tbody></table></div>`;
 const note=t=>`<aside class="research-note">${t}</aside>`;
 

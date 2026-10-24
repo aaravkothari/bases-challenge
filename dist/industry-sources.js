@@ -1,5 +1,5 @@
 // Bibliography for Tab 1 (Industries). Each note states what the source does and does not establish.
-// Figures labeled "our calc" or "our inference" in the copy are Bagel Bros arithmetic, not published numbers.
+// Figures labeled "our calc" or "our inference" in the copy are our arithmetic, not published numbers.
 export const industrySources = [
  {id:'I1',title:'The Space Economy',publisher:'Orbital Radar',date:'Accessed 24 Oct 2026',url:'https://orbitalradar.com/space-economy',note:'Aggregator estimate of a ~$626B space economy and the fall in launch price from tens of thousands to under $3,000/kg. Secondary synthesis, not an audited national-accounts figure.'},
  {id:'I2',title:'The Space Economy at a Glance 2026',publisher:'OECD',date:'2026',url:'https://www.oecd.org/en/publications/the-space-economy-at-a-glance-2026_cbf9b240-en.html',note:'Puts 2025 revenue at $550–600B with more than 14,000 operating satellites by end-2025. Conflicts mildly with I1; we quote both rather than reconcile them.'},

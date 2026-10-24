@@ -33,7 +33,7 @@ effects. `simulation.iframeUrl` in `dist/content.js` points at the built page; `
 sizes the iframe to its content.
 
 ## Model
-The Microgravity & medicine tab, section 04, embeds the stem-cell cost calculator from `dist/calculator/`: `pitch.html?embed=1&theme=dark&skin=bagel` is the four-step Earth vs space comparison shown in the iframe (`engine.js` holds the formulas, `scenario_data.js` the inputs, `skin-bagel.css` the site styling). The iframe resizes to its content (`mountCalculator` in `dist/app.js`).
+The Microgravity & medicine tab, section 04, embeds the stem-cell cost calculator from `dist/calculator/`: `pitch.html?embed=1&theme=dark&skin=site` is the four-step Earth vs space comparison shown in the iframe (`engine.js` holds the formulas, `scenario_data.js` the inputs, `skin-site.css` the site styling). The iframe resizes to its content (`mountCalculator` in `dist/app.js`).
 
 ## Navigation and printing
 Tabs and sections use hash URLs, e.g. `#medicine/economics`. Browser back/forward works. Print Research prints the current tab's content; switch tabs to print another chapter. The Research tab displays the working Google Doc directly.
@@ -51,7 +51,7 @@ The **tier list** (`TIERS` array) runs Tier 0 baseline → Tier 1 next → Tier 
 All 83 bibliography entries are cited in the body; each carries a note on what the source does *and does not* establish. Figures labelled "our calc", "our inference" or "our reasoning" are team arithmetic, not published numbers. Scores are explicitly judgment calls, and boundary cases (semiconductor crystals, commercial stations, debris removal) would move a tier on a one-point change.
 
 ## Tab 3: orbital economy research walkthrough
-The narrative follows Bagel Bros' thesis, Part 1, and Q1–Q3. Sources and source limitations are in `dist/infra-sources.js`. The recording remains embedded in `dist/infrastructure.js`.
+The narrative follows our thesis, Part 1, and Q1–Q3. Sources and source limitations are in `dist/infra-sources.js`. The recording remains embedded in `dist/infrastructure.js`.
 
 All five displayed graphs are rendered with LaTeX/PGFPlots, not JavaScript. Editable source: `figures/main.tex`. PDF and PNG assets: `dist/assets/latex/`. Rebuild from this folder:
 
