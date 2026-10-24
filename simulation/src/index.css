@@ -1,0 +1,66 @@
+@import "tailwindcss";
+@import "katex/dist/katex.min.css";
+@import "@fontsource/ibm-plex-mono/400.css";
+
+@theme {
+  --font-sans: Barlow, "IBM Plex Sans", system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+  --color-bg: transparent;
+  --color-line: #222a36;
+  --color-ink: #e6e9ee;
+  --color-ink-2: #9aa3b2;
+  --color-ink-3: #66707f;
+  --color-earth: #8a97ab;
+  --color-space: #2ad0e8;
+  --color-amber: #e9b44c;
+}
+
+html, body { background: #06090e; color: var(--color-ink); font-family: var(--font-sans); font-size: 14px; line-height: 1.55; -webkit-font-smoothing: antialiased; }
+body { margin: 0; }
+h1 { font-size: 22px; font-weight: 500; margin: 0 0 6px; letter-spacing: 0.02em; }
+p { margin: 0 0 10px; color: var(--color-ink-2); max-width: 72ch; }
+p strong, li strong { color: var(--color-ink); font-weight: 500; }
+a { color: var(--color-space); text-decoration: none; }
+a:hover { text-decoration: underline; }
+ul { list-style: disc; } ol { list-style: decimal; }
+ul, ol { color: var(--color-ink-2); padding-left: 1.2em; margin: 0 0 10px; }
+li { margin: 2px 0; }
+.mono { font-family: var(--font-mono); font-variant-numeric: tabular-nums; }
+.small { font-size: 12.5px; color: var(--color-ink-3); }
+
+button.plain { font: inherit; font-size: 13px; color: var(--color-ink-2); background: none; border: 1px solid var(--color-line); padding: 3px 10px; cursor: pointer; }
+button.plain:hover { color: var(--color-ink); }
+button.plain[aria-pressed="true"] { color: var(--color-ink); border-color: var(--color-ink-2); }
+
+input[type="checkbox"] { accent-color: var(--color-space); width: 13px; height: 13px; vertical-align: -2px; margin-right: 6px; }
+select { font: inherit; font-size: 12.5px; background: #06090e; color: var(--color-ink-2); border: 1px solid var(--color-line); padding: 2px 4px; }
+
+input[type="range"] { -webkit-appearance: none; appearance: none; width: 100%; height: 16px; background: transparent; cursor: pointer; }
+input[type="range"]::-webkit-slider-runnable-track { height: 2px; background: linear-gradient(to right, var(--fill, var(--color-space)) var(--pct, 50%), var(--color-line) var(--pct, 50%)); }
+input[type="range"]::-moz-range-track { height: 2px; background: var(--color-line); }
+input[type="range"]::-moz-range-progress { height: 2px; background: var(--fill, var(--color-space)); }
+input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; width: 11px; height: 11px; margin-top: -4.5px; border-radius: 50%; background: #06090e; border: 2px solid var(--fill, var(--color-space)); }
+input[type="range"]::-moz-range-thumb { width: 9px; height: 9px; border-radius: 50%; background: #06090e; border: 2px solid var(--fill, var(--color-space)); }
+input[type="range"]:focus-visible { outline: none; }
+input[type="range"]:focus-visible::-webkit-slider-thumb { box-shadow: 0 0 0 3px rgba(42,208,232,0.25); }
+
+table { border-collapse: collapse; font-size: 13.5px; }
+th { text-align: left; font-weight: 400; color: var(--color-ink-3); font-size: 12px; padding: 4px 10px 4px 0; border-bottom: 1px solid var(--color-line); }
+td { padding: 6px 10px 6px 0; border-bottom: 1px solid var(--color-line); color: var(--color-ink-2); vertical-align: top; }
+tr:last-child td { border-bottom: none; }
+
+.katex-display { margin: 8px 0 12px; text-align: left; }
+.katex-display > .katex { text-align: left; }
+.katex { font-size: 1em; }
+
+@keyframes travel { from { offset-distance: 0%; } to { offset-distance: 100%; } }
+@keyframes drift { 0%,100% { transform: translate(0,0); } 50% { transform: translate(1.5px,-1.5px); } }
+.flow { animation: travel var(--dur, 6s) linear infinite; animation-delay: var(--delay, 0s); }
+.drift { animation: drift var(--dur, 3s) ease-in-out infinite; animation-delay: var(--delay, 0s); }
+.fade { transition: opacity 400ms; }
+[data-reduced-motion="true"] .flow, [data-reduced-motion="true"] .drift { animation: none !important; }
+@media (prefers-reduced-motion: reduce) { .flow, .drift { animation: none !important; } }
+
+details summary { color: var(--color-ink-2); list-style: none; }
+details summary::before { content: '+ '; }
+details[open] summary::before { content: '− '; }

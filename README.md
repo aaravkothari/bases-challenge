@@ -11,18 +11,32 @@ Run `python3 -m http.server 4173 --directory dist` from this folder, then open h
 - `dist/style.css`: responsive design and print styles.
 - `dist/assets/`: three locally stored SpaceX reference images. Reference imagery is decorative SpaceX imagery used in the initial design template. These are design-template assets, not research evidence.
 
-## Integrate the simulation
-Choose one setting in `content.js`:
-1. `iframeUrl`: a hosted simulation URL or local page such as `sim/index.html`. Copy its files into `dist/sim/`.
-2. `moduleUrl`: an ES module path such as `./sim/main.js`. Export `mount(container)`, returning a cleanup function if your simulation uses animation loops or event listeners. Do not modify the outer page or navigation.
+## Simulation (ORBITALRx)
+The Microgravity & medicine tab, section 03, embeds `dist/sim/index.html?embed=1`: a pharmacokinetic
+model of an oral drug dose on Earth and under an adjustable spaceflight scenario. The source is a small
+React + TypeScript app in `simulation/`; the built files in `dist/sim/` are committed, so the site still
+needs no build step. To change the simulation:
 
-The iframe has a title and a fixed responsive viewport. It allows scripts and same-origin behavior; only embed trusted team code. Module loading failures show an unavailable state. Navigating away calls the module's cleanup function.
+```sh
+cd simulation
+npm install
+npm run dev      # local preview
+npm test         # model tests (closed-form vs RK4, mass balance, sensitivities)
+npm run build    # writes dist/sim/
+```
+
+The model is the standard one-compartment model with first-order absorption and elimination
+(`simulation/src/model/pk.ts`). The hypothetical drug is 100 mg, F 0.85, ka 1.2 /h, CL 7.2 L/h, Vd 40 L.
+The spaceflight scenario multiplies ka, CL, Vd and F by user-set factors; the defaults (0.80, 0.75, 0.85,
+1.00) follow the direction the physiology literature suggests and are illustrative in size, not measured
+effects. `simulation.iframeUrl` in `dist/content.js` points at the built page; `fitFrame` in `dist/app.js`
+sizes the iframe to its content.
 
 ## Model
-The Microgravity & medicine tab, section 04, embeds the stem-cell cost calculator from `dist/calculator/`: `pitch.html?embed=1&theme=dark&skin=bagel` is the four-step Earth vs space comparison shown in the iframe (`engine.js` holds the formulas, `scenario_data.js` the inputs, `skin-bagel.css` the site styling). The iframe resizes to its content (`mountCalculator` in `dist/app.js`).
+The Microgravity & medicine tab, section 04, embeds the stem-cell cost calculator from `dist/calculator/`: `pitch.html?embed=1&theme=dark&skin=site` is the four-step Earth vs space comparison shown in the iframe (`engine.js` holds the formulas, `scenario_data.js` the inputs, `skin-site.css` the site styling). The iframe resizes to its content (`mountCalculator` in `dist/app.js`).
 
 ## Navigation and printing
-Tabs and sections use hash URLs, e.g. `#economy/calculator`. Browser back/forward works. Print Research prints the current tab's content; switch tabs to print another chapter. The Research tab displays the working Google Doc directly.
+Tabs and sections use hash URLs, e.g. `#medicine/economics`. Browser back/forward works. Print Research prints the current tab's content; switch tabs to print another chapter. The Research tab displays the working Google Doc directly.
 
 ## Tab 1: zero launch cost industry feasibility
 
@@ -37,7 +51,7 @@ The **tier list** (`TIERS` array) runs Tier 0 baseline → Tier 1 next → Tier 
 All 83 bibliography entries are cited in the body; each carries a note on what the source does *and does not* establish. Figures labelled "our calc", "our inference" or "our reasoning" are team arithmetic, not published numbers. Scores are explicitly judgment calls, and boundary cases (semiconductor crystals, commercial stations, debris removal) would move a tier on a one-point change.
 
 ## Tab 3: orbital economy research walkthrough
-The narrative follows Bagel Bros' thesis, Part 1, and Q1–Q3. Sources and source limitations are in `dist/infra-sources.js`. The recording remains embedded in `dist/infrastructure.js`.
+The narrative follows our thesis, Part 1, and Q1–Q3. Sources and source limitations are in `dist/infra-sources.js`. The recording remains embedded in `dist/infrastructure.js`.
 
 All five displayed graphs are rendered with LaTeX/PGFPlots, not JavaScript. Editable source: `figures/main.tex`. PDF and PNG assets: `dist/assets/latex/`. Rebuild from this folder:
 
