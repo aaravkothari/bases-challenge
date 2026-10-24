@@ -2,7 +2,7 @@ const section=(id,n,title,body)=>`<section class="research-section" id="${id}"><
 const table=(heads,rows)=>`<div class="research-table" tabindex="0" role="region" aria-label="${heads.join(', ')}"><table><thead><tr>${heads.map(h=>`<th scope="col">${h}</th>`).join('')}</tr></thead><tbody>${rows.map(r=>`<tr>${r.map((v,i)=>i?`<td>${v}</td>`:`<th scope="row">${v}</th>`).join('')}</tr>`).join('')}</tbody></table></div>`;
 const note=t=>`<aside class="research-note">${t}</aside>`;
 
-// Scores are Bagel Bros judgment calls under the rubric below, assuming zero launch cost.
+// Scores are our judgment calls under the rubric below, assuming zero launch cost.
 // [industry, sector, L, P, D, E, M, R, U, tier, spotlight]
 const SCORES=[
  ['A. Pharma & biologics','Health',2,2,2,1,1,1,2,'1',true],
