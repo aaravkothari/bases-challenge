@@ -19,7 +19,7 @@ Choose one setting in `content.js`:
 The iframe has a title and a fixed responsive viewport. It allows scripts and same-origin behavior; only embed trusted team code. Module loading failures show an unavailable state. Navigating away calls the module's cleanup function.
 
 ## Model
-Tab 1, section 05 embeds the stem-cell cost calculator from `dist/calculator/` (copied from https://github.com/ManasPuri3/stem-cell-space-calculator). `pitch.html?embed=1&theme=dark` is the four-step Earth vs space comparison shown in the iframe; `calculator/index.html` is the full model with every assumption, evidence rating and source. To update it, copy the `app/` files from that repo into `dist/calculator/`. The iframe resizes to its content (`mountCalculator` in `dist/app.js`).
+The Microgravity & medicine tab, section 04, embeds the stem-cell cost calculator from `dist/calculator/`: `pitch.html?embed=1&theme=dark&skin=bagel` is the four-step Earth vs space comparison shown in the iframe (`engine.js` holds the formulas, `scenario_data.js` the inputs, `skin-bagel.css` the site styling). The iframe resizes to its content (`mountCalculator` in `dist/app.js`).
 
 ## Navigation and printing
 Tabs and sections use hash URLs, e.g. `#economy/calculator`. Browser back/forward works. Print Research prints the current tab's content; switch tabs to print another chapter. The Research tab displays the working Google Doc directly.
