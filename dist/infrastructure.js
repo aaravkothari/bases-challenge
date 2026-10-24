@@ -7,7 +7,12 @@ const fig=(n,alt,caption)=>`<figure class="latex-figure"><a href="assets/latex/f
 export function infrastructure(){return `<article class="research-walkthrough">`+
 section('brief','THESIS','Do orbital data centers win out over the next 50 years?',`
 <p class="research-deck">What is the first self-sustaining industry that sells only to other customers in space?</p>
-<div class="thesis-block"><p>Orbital servicing is one of the first commercially demonstrated space-to-space services, with Northrop Grumman’s Mission Extension Vehicles serving Intelsat since 2020 and securing renewed commitments in 2024. ${c('S9','S10')} As orbital computing scales, standardized, robotically replaceable hardware could transform satellite servicing from occasional life extension into recurring infrastructure maintenance. Whether that market becomes self-sustaining depends on the point at which robotic repairs and chip upgrades become cheaper than redundancy or spacecraft replacement.</p></div>
+<div class="thesis-block">
+<div class="thesis-heading"><span class="thesis-label">THE OPPORTUNITY</span><h3>Keep the platform.<br>Upgrade the compute.</h3></div>
+<div class="thesis-copy"><p>Satellite servicing is already operating in orbit. Northrop Grumman’s Mission Extension Vehicles have served Intelsat since 2020, with renewed commitments in 2024. ${c('S9','S10')}</p>
+<p>Standardized, replaceable hardware could make maintenance routine as orbital computing grows.</p>
+<p class="thesis-condition">The test: repair and chip upgrades must cost less than redundancy or spacecraft replacement.</p></div>
+</div>
 <p>We start with whether orbital data centers win out. Then we ask three questions: will enough exist, will repair cost less, and will maintenance become viable before other space-to-space services?</p>
 <p class="microcopy">By “space-only,” we mean customers’ assets are in space; the companies paying can be on Earth. By “self-sustaining,” we mean recurring customer revenue covers operations and replacement capital without recurring subsidy.</p>`)+
 section('demand','PART 1 · DEMAND','Inference needs infrastructure.',`
