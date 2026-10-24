@@ -12,4 +12,4 @@ export const sources = infraSources.map(s => ({...s, authors:s.publisher, year:s
 export const team = [];
 export const rawWorkUrl = 'https://docs.google.com/document/d/1m0MRTQmJezOaSiOQbtm9-O7fS10f23QGVEpYDz-jpso/edit?usp=sharing';
 // Configure either iframeUrl OR moduleUrl. A module exports mount(container), optionally returning cleanup().
-export const simulation = { iframeUrl: '', moduleUrl: '', title: 'Space medicine simulation' };
+export const simulation = { iframeUrl: 'sim/index.html?embed=1', moduleUrl: '', title: 'ORBITALRx: drug levels in the blood on Earth and in space' };
