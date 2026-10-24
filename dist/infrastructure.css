@@ -5,3 +5,5 @@
 .research-section .latex-figure{margin:32px 0}.latex-figure img{display:block;width:100%;height:auto;background:#fff}.latex-figure figcaption a,.research-section p>a:not(.ref){color:#b9d9ef;text-decoration:underline;text-underline-offset:3px}.research-section .equation{font-family:Georgia,serif;font-size:19px}.research-section p{max-width:970px}.research-section .research-kicker{margin-bottom:16px}.research-section h3{margin-top:30px}.research-section .microcopy{max-width:900px}
 
 .source-table-image{display:block;width:100%;height:auto;margin:20px 0;background:white}#inventory .research-table:has(th:nth-child(6)) table{min-width:1000px}#inventory .research-table:has(th:nth-child(6)) td:last-child{min-width:300px}
+
+.paper-screenshot{margin:32px 0}.paper-screenshot figcaption a{color:#b9d9ef;text-decoration:underline;text-underline-offset:3px}
