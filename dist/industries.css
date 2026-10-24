@@ -1,0 +1,135 @@
+/* Tab 1 — Industries. Extends the .research-* system from infrastructure.css. */
+.industry-walkthrough{--accent:#8fe1c1;--blue:#81b7ed;--gold:#d4b482;--warn:#e3946f;--kill:#d98b94;background:#080a0c;border-bottom:1px solid #2c3138}
+
+/* ---- Headline premise split ---- */
+.premise-split{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin:28px 0 10px}
+.premise-card{border:1px solid #29313a;background:#0c1116;padding:24px 26px}
+.premise-card.goes-zero{border-left:2px solid var(--accent)}
+.premise-card.stays{border-left:2px solid var(--gold)}
+.premise-card h3{font:10px monospace;letter-spacing:1.2px;text-transform:uppercase;margin:0 0 16px;color:#a4b2c0}
+.premise-card ul{margin:0;padding:0;list-style:none}
+.premise-card li{font-size:14px;line-height:1.5;color:#b7c1cc;padding:7px 0;border-bottom:1px solid #1d242b}
+.premise-card li:last-child{border-bottom:0}
+.premise-card.goes-zero li{color:#cfe6dd}
+
+/* ---- Stat band ---- */
+.stat-band{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:#242c34;border:1px solid #242c34;margin:30px 0}
+.stat-band div{background:#0c1116;padding:22px 20px}
+.stat-band b{display:block;font:600 clamp(24px,2.6vw,34px)/1.1 'Barlow Condensed',Barlow,Arial,sans-serif;color:#e3edf5;letter-spacing:-.5px}
+.stat-band span{display:block;font-size:12px;line-height:1.5;color:#8ea0b1;margin-top:9px}
+
+/* ---- Space-for-Earth vs space-for-space ---- */
+.split-cards{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin:30px 0}
+.split-card{border:1px solid #29313a;background:#0c1116;padding:26px 28px;position:relative}
+.split-card.survives{border-top:2px solid var(--accent)}
+.split-card.dies{border-top:2px solid var(--kill)}
+.split-card .verdict-chip{font:9px monospace;letter-spacing:1px;text-transform:uppercase;padding:5px 9px;border:1px solid currentColor;display:inline-block;margin-bottom:14px}
+.split-card.survives .verdict-chip{color:var(--accent)}
+.split-card.dies .verdict-chip{color:var(--kill)}
+.split-card h3{font:500 20px/1.3 Barlow,Arial,sans-serif;color:#e1e7ed;margin:0 0 12px}
+.split-card p{font-size:14px;line-height:1.7;color:#b7c1cc;margin:0 0 12px}
+.split-card p:last-child{margin-bottom:0}
+.split-card .examples{font-size:12px;color:#8ea0b1;border-top:1px solid #1f262d;padding-top:13px;margin-top:4px}
+
+/* ---- Tier list ---- */
+.tier-list{display:grid;gap:12px;margin:32px 0 10px}
+.tier-row{display:grid;grid-template-columns:200px 1fr;gap:30px;border:1px solid #242c34;border-left:3px solid var(--tc);background:#0c1116;padding:22px 26px;align-items:start}
+.tier-row.t0{--tc:#6a839b}
+.tier-row.t1{--tc:#8fe1c1}
+.tier-row.t2{--tc:#d4b482}
+.tier-row.t3a{--tc:#e3946f}
+.tier-row.t3b{--tc:#d98b94}
+.tier-row .tier-id{font:600 26px/1 'Barlow Condensed',Barlow,Arial,sans-serif;color:var(--tc);letter-spacing:.5px;display:block}
+.tier-row .tier-name{font:10px monospace;letter-spacing:1.1px;text-transform:uppercase;color:#9fb0c0;display:block;margin-top:7px}
+.tier-row .tier-meaning{font-size:12.5px;line-height:1.6;color:#8ea0b1;margin-top:11px;display:block}
+.tier-chips{display:flex;flex-wrap:wrap;gap:8px;padding-top:4px}
+.tier-chips .chip{font-size:13px;line-height:1.3;color:#c3ced9;border:1px solid #333c46;background:#10161c;padding:8px 13px;border-radius:2px}
+.tier-chips .chip.star{color:#0b1410;background:var(--tc);border-color:var(--tc);font-weight:600}
+.tier-row.t3b .tier-chips .chip{text-decoration:line-through;text-decoration-color:#6b4349;color:#9aa6b1}
+
+/* ---- Scoring matrix heat table ---- */
+.score-matrix{overflow-x:auto;margin:26px 0}
+.score-matrix table{min-width:860px;border-collapse:collapse;width:100%}
+.score-matrix th{font:10px monospace;color:#a4b2c0;letter-spacing:.3px;padding:12px 10px;border-bottom:1px solid #46515d;background:#0e1318;text-align:left;white-space:nowrap}
+.score-matrix th.num{text-align:center;width:42px;padding:12px 4px}
+.score-matrix th[scope=row]{font:500 13px/1.45 Barlow,Arial,sans-serif;text-transform:none;color:#e0e6ed;background:transparent;min-width:185px;letter-spacing:0;white-space:normal;border-bottom:1px solid #222a32}
+.score-matrix td{font-size:12.5px;color:#9fb0c0;padding:10px;border-bottom:1px solid #222a32;vertical-align:middle}
+.score-matrix td.sc{text-align:center;font:600 13px/1 monospace;padding:10px 4px}
+.score-matrix td.sc0{color:#d98b94;background:#1a1114}
+.score-matrix td.sc1{color:#d4b482;background:#1a1711}
+.score-matrix td.sc2{color:#8fe1c1;background:#0d1a16}
+.score-matrix td.total{text-align:center;font:600 14px/1 'Barlow Condensed',Barlow,Arial,sans-serif;color:#e3edf5}
+.score-matrix tr.spot th[scope=row]{color:#fff}
+.score-matrix tr.spot th[scope=row]:before{content:'★';color:var(--accent);margin-right:7px;font-size:11px;vertical-align:1px}
+.score-matrix tr.band-break td,.score-matrix tr.band-break th{border-bottom:1px solid #46515d}
+.tier-pill{font:9px monospace;letter-spacing:.6px;padding:4px 7px;border:1px solid currentColor;border-radius:2px;white-space:nowrap}
+.tier-pill.p1{color:#8fe1c1}.tier-pill.p2{color:#d4b482}.tier-pill.p3a{color:#e3946f}.tier-pill.p3b{color:#d98b94}
+.score-matrix td.tiercell{text-align:center;padding:10px 6px}
+
+/* ---- Rubric legend ---- */
+.rubric-legend{display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:9px;margin:22px 0}
+.rubric-legend div{background:#0c1116;border:1px solid #242c34;padding:15px 17px}
+.rubric-legend b{font:600 13px/1 monospace;color:var(--accent);display:inline-block;margin-right:8px}
+.rubric-legend span{font-size:12.5px;color:#a9b6c2;line-height:1.5}
+.tier-rules{margin:20px 0;padding:0 0 0 20px;counter-reset:tr}
+.tier-rules li{font-size:13.5px;line-height:1.7;color:#b7c1cc;padding:3px 0}
+.tier-rules li code{font:11px monospace;color:var(--gold);background:#1a1711;padding:2px 6px;border-radius:2px}
+
+/* ---- Industry evidence cards ---- */
+.ind-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px;margin:26px 0}
+.ind-card{border:1px solid #242c34;background:#0c1116;padding:21px 23px;border-top:2px solid var(--ic,#333c46)}
+.ind-card.lead{--ic:#8fe1c1}
+.ind-card h3{font:500 17px/1.3 Barlow,Arial,sans-serif;color:#e1e7ed;margin:0 0 4px;display:flex;justify-content:space-between;align-items:baseline;gap:12px}
+.ind-card h3 em{font:600 15px/1 'Barlow Condensed',Barlow,Arial,sans-serif;font-style:normal;color:#8ea0b1;flex-shrink:0}
+.ind-card .ind-sector{font:9px monospace;letter-spacing:1px;text-transform:uppercase;color:#7d8d9c;display:block;margin-bottom:13px}
+.ind-card p{font-size:13.5px;line-height:1.65;color:#b7c1cc;margin:0 0 10px}
+.ind-card p:last-child{margin-bottom:0}
+.ind-card p b{color:#cfd9e3;font-weight:600}
+.ind-card .gate{font-size:12.5px;color:#d4b482;border-top:1px solid #1f262d;padding-top:11px;margin-top:13px}
+.ind-card .gate b{color:#d4b482;font:9px monospace;letter-spacing:1px;text-transform:uppercase;display:block;margin-bottom:5px}
+.ind-card.killed{--ic:#d98b94}
+.ind-card.killed .gate{color:#d98b94}
+.ind-card.killed .gate b{color:#d98b94}
+
+/* ---- Handoff links ---- */
+.handoff{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:30px}
+.handoff a{border:1px solid #333c46;background:#0c1116;padding:22px 24px;display:block;transition:background .2s,border-color .2s}
+.handoff a:hover{background:#121a21;border-color:#53626f}
+.handoff .nx{font:9px monospace;letter-spacing:1.2px;text-transform:uppercase;color:#8ea0b1;display:block;margin-bottom:9px}
+.handoff strong{font:500 18px/1.3 Barlow,Arial,sans-serif;color:#e1e7ed;display:block}
+.handoff em{font-style:normal;font-size:13px;color:#9fb0c0;display:block;margin-top:7px;line-height:1.6}
+
+/* ---- Bibliography (mirrors .infra-bibliography) ---- */
+.industry-bibliography{list-style:none;padding:0;margin:25px 0 0;counter-reset:none}
+.industry-bibliography li{display:grid;grid-template-columns:52px 1fr;gap:16px;padding:17px 0;border-bottom:1px solid #232a32;scroll-margin-top:170px}
+.industry-bibliography li>span{font:11px monospace;color:var(--accent);padding-top:3px}
+.industry-bibliography a{font-size:14px;color:#dbe4ec;line-height:1.5}
+.industry-bibliography a:hover{text-decoration:underline}
+.industry-bibliography p{font-size:12px;color:#8ea0b1;margin:5px 0 0}
+.industry-bibliography small{font-size:11.5px;color:#7f8e9c;line-height:1.65;display:block;margin-top:7px}
+
+@media(max-width:1100px){
+  .stat-band{grid-template-columns:1fr 1fr}
+  .tier-row{grid-template-columns:150px 1fr;gap:20px;padding:20px}
+}
+@media(max-width:780px){
+  .premise-split,.split-cards,.handoff{grid-template-columns:1fr}
+  .stat-band{grid-template-columns:1fr}
+  .tier-row{grid-template-columns:1fr;gap:14px}
+  .tier-row .tier-meaning{margin-top:8px}
+}
+@media print{
+  .industry-walkthrough{background:#fff}
+  .premise-card,.split-card,.tier-row,.ind-card,.stat-band div,.rubric-legend div,.handoff a{background:#fff;border-color:#aaa}
+  .stat-band{background:#aaa;border-color:#aaa}
+  .tier-row,.ind-card,.split-card,.handoff a{break-inside:avoid}
+  .tier-chips .chip{background:#fff;border-color:#888;color:#222}
+  .tier-chips .chip.star{background:#ddd;color:#000}
+  .score-matrix td.sc0,.score-matrix td.sc1,.score-matrix td.sc2{background:#fff;color:#222}
+  .score-matrix th{background:#eee}
+  .stat-band b,.split-card h3,.ind-card h3,.handoff strong,.score-matrix td.total{color:#111}
+  .premise-card li,.split-card p,.ind-card p,.stat-band span,.rubric-legend span,.tier-row .tier-meaning{color:#333}
+  .handoff{display:none}
+}
+.premise-card .one-line{font-size:13px;line-height:1.7;color:#8fa9a0;margin:18px 0 0;border-top:1px solid #1d242b;padding-top:16px}
+@media print{.premise-card .one-line{color:#333}}

@@ -18,3 +18,36 @@
 .research-section .thesis-copy .ref:focus-visible{outline:1px solid currentColor;outline-offset:3px}
 @media(max-width:780px){.research-section .thesis-block{grid-template-columns:1fr;gap:28px;padding:28px 0;margin-top:30px}.research-section .thesis-heading h3{font-size:36px}.research-section .thesis-copy p{font-size:16px}}
 @media print{.research-section .thesis-heading h3,.research-section .thesis-copy .thesis-condition{color:#111}.thesis-label{color:#555}.research-section .thesis-block{break-inside:avoid}}
+
+/* Readability: larger type across the Orbital economy tab, and emphasis on the pitch's key numbers. */
+.research-walkthrough .research-section p{font-size:18px;line-height:1.7}
+.research-walkthrough .research-section p.research-deck{font-size:22px;line-height:1.5}
+.research-walkthrough .research-section>h3{font-size:25px}
+.research-walkthrough .research-kicker{font-size:13px;letter-spacing:2px}
+.research-walkthrough .research-section .ref{font-size:12px}
+.research-walkthrough .research-section strong{color:#fff;font-weight:700}
+.research-walkthrough .research-section p.callout{font-size:20px;color:#e3edf5;border-left:3px solid var(--accent);padding-left:18px}
+.research-walkthrough .research-note{font-size:18px;line-height:1.7}
+.research-walkthrough .research-note strong{font-size:21px;display:block;margin-bottom:8px}
+.research-walkthrough .research-section .microcopy,.research-walkthrough .research-section p.source-caption{font-size:15px;line-height:1.6}
+.research-walkthrough .research-section figcaption{font-size:15px;line-height:1.6}
+.research-walkthrough .research-section figcaption b{font-size:13px}
+.research-walkthrough .research-table th{font-size:13px}
+.research-walkthrough .research-table th[scope=row]{font-size:17px}
+.research-walkthrough .research-table td{font-size:16px;line-height:1.55}
+.research-walkthrough .research-details summary{font-size:17px}
+.research-walkthrough .research-details p{font-size:16px}
+.research-walkthrough .research-section .equation{font-size:24px;line-height:1.5;margin:20px 0}
+.research-walkthrough .research-section .thesis-copy p{font-size:19px}
+.research-walkthrough .thesis-label{font-size:12px}
+.research-walkthrough .infra-bibliography p{font-size:15px}
+.research-walkthrough .infra-bibliography small{font-size:13px}
+.key-points{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:#333;border:1px solid #333;margin:10px 0 34px}
+.key-points>a{display:flex;flex-direction:column;gap:8px;background:#080a0c;padding:22px 20px;text-decoration:none;min-width:0}
+.key-points>a:hover,.key-points>a:focus-visible{background:#11161b;outline:none}
+.key-points strong{font:600 clamp(28px,3vw,40px)/1 'Barlow Condensed',Arial,sans-serif;color:var(--accent)}
+.key-points span{font-size:15px;line-height:1.45;color:#c4ccd4}
+@media(max-width:1100px){.key-points{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:780px){.research-walkthrough .research-section p{font-size:17px}.research-walkthrough .research-section p.research-deck{font-size:19px}.research-walkthrough .research-section p.callout{font-size:18px}.research-walkthrough .research-table td{font-size:15px}.research-walkthrough .research-note{font-size:17px}.key-points strong{font-size:30px}}
+@media(max-width:420px){.key-points{grid-template-columns:1fr}}
+@media print{.key-points{background:#fff;border-color:#aaa}.key-points>a{background:#fff}.key-points strong{color:#164b38}.key-points span{color:#333}.research-walkthrough .research-section strong{color:#111}.research-walkthrough .research-section p.callout{color:#111}}

@@ -6,7 +6,7 @@ Static three-tab presentation template. No build or dependencies required.
 Run `python3 -m http.server 4173 --directory dist` from this folder, then open http://localhost:4173.
 
 ## Add your work
-- `dist/content.js`: hero text and imagery, industry candidates, source records, team bios, Google Doc URL, and simulation settings.
+- `dist/content.js`: hero text and imagery, source records, team bios, Google Doc URL, and simulation settings.
 - `dist/app.js`: research sections and calculator shell. No economic formulas or findings have been invented. Replace pending text with your research, and use `citation('source-id')` with a matching source record for linked in-text citations.
 - `dist/style.css`: responsive design and print styles.
 - `dist/assets/`: three locally stored SpaceX reference images. Reference imagery is decorative SpaceX imagery used in the initial design template. These are design-template assets, not research evidence.
@@ -24,6 +24,18 @@ The Microgravity & medicine tab, section 04, embeds the stem-cell cost calculato
 ## Navigation and printing
 Tabs and sections use hash URLs, e.g. `#economy/calculator`. Browser back/forward works. Print Research prints the current tab's content; switch tabs to print another chapter. The Research tab displays the working Google Doc directly.
 
+## Tab 1: zero launch cost industry feasibility
+
+Answers the opening half of Question 1 — *which industries become possible, and which still don't make sense* — from `BASES_Challenge.pdf`. Content lives in `dist/industries.js`, sources in `dist/industry-sources.js`, styling in `dist/industries.css`.
+
+Eight sections: the premise (what actually goes to zero), the organising split (space-for-Earth survives, space-for-space doesn't), the scoring matrix, the tier list, what opens, what doesn't, value density, and sources.
+
+The **feasibility matrix** scores 19 industries on seven criteria (L/P/D/E/M/R/U, each 0–2) under a zero-launch-cost assumption, rendered as a colour-coded heat table. Scores are stored in the `SCORES` array at the top of `industries.js`; totals and tier pills are computed from that array, so editing a score updates the table automatically. Tier placement follows five ordered rules documented in the Matrix section, and every one of the 19 rows satisfies them — no industry is placed by hand.
+
+The **tier list** (`TIERS` array) runs Tier 0 baseline → Tier 1 next → Tier 2 open → Tier 3a blocked → Tier 3b killed, colour-coded and keyed to the same rules.
+
+All 83 bibliography entries are cited in the body; each carries a note on what the source does *and does not* establish. Figures labelled "our calc", "our inference" or "our reasoning" are team arithmetic, not published numbers. Scores are explicitly judgment calls, and boundary cases (semiconductor crystals, commercial stations, debris removal) would move a tier on a one-point change.
+
 ## Tab 3: orbital economy research walkthrough
 The narrative follows Bagel Bros' thesis, Part 1, and Q1–Q3. Sources and source limitations are in `dist/infra-sources.js`. The recording remains embedded in `dist/infrastructure.js`.
 
@@ -40,7 +52,7 @@ Requires Tectonic and Poppler only when rebuilding figures. No build dependencie
 
 Production hosting uses GitHub Pages.
 
-Primary navigation: Industries (matrix, potential industries, industries that don’t work), Microgravity & Medicine (premise, medicine, simulation, calculator, verdict), and Orbital Economy (existing infrastructure walkthrough). Research remains accessible via the research link and displays the embedded Google Doc configured by `rawWorkUrl` in `dist/content.js`. Industry classifications remain pending evidence.
+Primary navigation: Industries (premise, split, matrix, tier list, what opens, what doesn’t, value density, sources), Microgravity & Medicine (premise, medicine, simulation, calculator, verdict), and Orbital Economy (existing infrastructure walkthrough). Research remains accessible via the research link and displays the embedded Google Doc configured by `rawWorkUrl` in `dist/content.js`.
 
 ## GitHub Pages deployment
 `.github/workflows/pages.yml` publishes `dist/` on pushes to `main`, or via a manual workflow run. In repository Settings → Pages, select **GitHub Actions** as the source. Relative asset paths and hash navigation support the `/bases-challenge/` project URL.
