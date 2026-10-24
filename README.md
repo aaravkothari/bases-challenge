@@ -1,4 +1,4 @@
-# Bagel Bros — The Orbital Economy
+# The Orbital Economy
 
 Static three-tab presentation template. No build or dependencies required.
 
@@ -24,7 +24,7 @@ Tab 1, section 05 embeds the stem-cell cost calculator from `dist/calculator/` (
 ## Navigation and printing
 Tabs and sections use hash URLs, e.g. `#economy/calculator`. Browser back/forward works. Print Research prints the current tab's content; switch tabs to print another chapter. The initial template has no research bibliography entries, bios, or external document links.
 
-## Tab 2: research walkthrough
+## Tab 3: orbital economy research walkthrough
 The narrative follows Bagel Bros' thesis, Part 1, and Q1–Q3. Sources and source limitations are in `dist/infra-sources.js`. The recording remains embedded in `dist/infrastructure.js`.
 
 All five displayed graphs are rendered with LaTeX/PGFPlots, not JavaScript. Editable source: `figures/main.tex`. PDF and PNG assets: `dist/assets/latex/`. Rebuild from this folder:
@@ -39,3 +39,5 @@ cp figures/main.tex dist/assets/latex/main.tex
 Requires Tectonic and Poppler only when rebuilding figures. No build dependencies are needed to serve the website. The previous JavaScript model module and tests are retained as historical working files but are not imported by the current walkthrough. Capacity growth and repair budgets are labeled scenarios, not forecasts or quoted prices. SEC excerpts and Kalshi snapshots remain explicitly unverified.
 
 This update is local-only.
+
+Primary navigation: Industries (matrix, potential industries, industries that don’t work), Microgravity & Medicine (premise, medicine, simulation, calculator, verdict), and Orbital Economy (existing infrastructure walkthrough). Research & Team remains accessible via the research link. Industry classifications remain pending evidence.
