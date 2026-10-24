@@ -8,6 +8,8 @@
 
 /* Bagel Bros wordmark */
 .brand{text-transform:uppercase;font-size:24px;letter-spacing:3px;white-space:nowrap}header{gap:35px}header nav{gap:25px}@media(max-width:1100px){header{gap:25px}header nav{gap:18px}}@media(max-width:720px){.brand{font-size:22px;letter-spacing:2px}}
+.calc-intro{max-width:780px;margin:0 0 50px}.calc-intro p{max-width:none;color:#b0b3b9}.calc-intro p.large{color:#eee}.calc-intro ul{margin:-12px 0 31px;padding-left:22px;color:#b0b3b9;font-size:16px;line-height:1.6}.calc-intro li{margin:4px 0}@media print{.calc-intro p,.calc-intro p.large,.calc-intro ul{color:#000}.calc-intro .button{display:none}}
+.calc-embed{border:1px solid #2d3036;background:#000;margin:0 0 30px}.calc-embed iframe{display:block;width:100%;height:760px;border:0;background:#000}@media print{.calc-embed{display:none}}
 
 /* Keep the astronaut visible in the medicine tab on narrow screens. */
 .hero-economy{background-position:30% center}
