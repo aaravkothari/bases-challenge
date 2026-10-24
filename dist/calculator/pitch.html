@@ -88,6 +88,14 @@
     var q = new URLSearchParams(location.search), t = q.get('theme');
     if (t === 'dark' || t === 'light') document.documentElement.setAttribute('data-theme', t);
     if (q.get('embed') === '1') document.documentElement.setAttribute('data-embed', '');
+    // ?skin=name loads skin-name.css next to this page, so a host site can restyle the embed to match itself.
+    var skin = q.get('skin');
+    if (skin && /^[a-z0-9-]{1,32}$/.test(skin)) {
+      var l = document.createElement('link');
+      l.rel = 'stylesheet'; l.href = 'skin-' + skin + '.css';
+      document.head.appendChild(l);
+      document.documentElement.setAttribute('data-skin', skin);
+    }
   })();
 </script>
 <main>
