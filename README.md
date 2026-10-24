@@ -38,11 +38,13 @@ cp figures/main.tex dist/assets/latex/main.tex
 
 Requires Tectonic and Poppler only when rebuilding figures. No build dependencies are needed to serve the website. The previous JavaScript model module and tests are retained as historical working files but are not imported by the current walkthrough. Capacity growth and repair budgets are labeled scenarios, not forecasts or quoted prices. SEC excerpts and Kalshi snapshots remain explicitly unverified.
 
-This update is local-only.
+Production hosting uses GitHub Pages.
 
 Primary navigation: Industries (matrix, potential industries, industries that don’t work), Microgravity & Medicine (premise, medicine, simulation, calculator, verdict), and Orbital Economy (existing infrastructure walkthrough). Research & Team remains accessible via the research link. Industry classifications remain pending evidence.
 
 ## GitHub Pages deployment
 `.github/workflows/pages.yml` publishes `dist/` on pushes to `main`, or via a manual workflow run. In repository Settings → Pages, select **GitHub Actions** as the source. Relative asset paths and hash navigation support the `/bases-challenge/` project URL.
 
-Activation is currently blocked: GitHub reports that the account plan does not support Pages for this private repository. Keep the repository private with a qualifying plan, or explicitly approve making the repository public before enabling Pages. The existing Vercel deployment remains in place until Pages is live; then disable Vercel Git deployments and update the repository homepage to the returned Pages URL.
+Live site: https://aaravkothari.github.io/bases-challenge/
+
+The repository is public and Pages uses GitHub Actions. `vercel.json` disables automatic Vercel Git deployments. Existing Vercel deployments are retained but no longer receive automatic updates.
