@@ -41,3 +41,8 @@ Requires Tectonic and Poppler only when rebuilding figures. No build dependencie
 This update is local-only.
 
 Primary navigation: Industries (matrix, potential industries, industries that don’t work), Microgravity & Medicine (premise, medicine, simulation, calculator, verdict), and Orbital Economy (existing infrastructure walkthrough). Research & Team remains accessible via the research link. Industry classifications remain pending evidence.
+
+## GitHub Pages deployment
+`.github/workflows/pages.yml` publishes `dist/` on pushes to `main`, or via a manual workflow run. In repository Settings → Pages, select **GitHub Actions** as the source. Relative asset paths and hash navigation support the `/bases-challenge/` project URL.
+
+Activation is currently blocked: GitHub reports that the account plan does not support Pages for this private repository. Keep the repository private with a qualifying plan, or explicitly approve making the repository public before enabling Pages. The existing Vercel deployment remains in place until Pages is live; then disable Vercel Git deployments and update the repository homepage to the returned Pages URL.
