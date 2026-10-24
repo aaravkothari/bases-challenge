@@ -19,7 +19,7 @@ Choose one setting in `content.js`:
 The iframe has a title and a fixed responsive viewport. It allows scripts and same-origin behavior; only embed trusted team code. Module loading failures show an unavailable state. Navigating away calls the module's cleanup function.
 
 ## Model
-The calculator is intentionally disabled. Add researched formulas, input bounds, units, and source-backed defaults before enabling it. Distinguish cost competitiveness from profitability and use quality-adjusted usable output, not raw cell counts. Do not populate a result before a valid model exists.
+Tab 1, section 05 embeds the stem-cell cost calculator from `dist/calculator/` (copied from https://github.com/ManasPuri3/stem-cell-space-calculator). `pitch.html?embed=1&theme=dark` is the four-step Earth vs space comparison shown in the iframe; `calculator/index.html` is the full model with every assumption, evidence rating and source. To update it, copy the `app/` files from that repo into `dist/calculator/`. The iframe resizes to its content (`mountCalculator` in `dist/app.js`).
 
 ## Navigation and printing
 Tabs and sections use hash URLs, e.g. `#economy/calculator`. Browser back/forward works. Print Research prints the current tab's content; switch tabs to print another chapter. The initial template has no research bibliography entries, bios, or external document links.
