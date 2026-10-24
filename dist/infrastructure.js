@@ -1,5 +1,5 @@
 import {infraSources} from './infra-sources.js';
-const c=(...ids)=>ids.map(id=>`<a class="ref" href="#infrastructure/ref-${id}" aria-label="Source ${id}">[${id}]</a>`).join(' ');
+const c=(...ids)=>ids.map(id=>`<a class="ref" href="#orbital-economy/ref-${id}" aria-label="Source ${id}">[${id}]</a>`).join(' ');
 const section=(id,n,title,body)=>`<section class="research-section" id="${id}"><div class="research-kicker">${n} / BAGEL BROS</div><h2>${title}</h2>${body}</section>`;
 const table=(heads,rows)=>`<div class="research-table" tabindex="0" role="region" aria-label="${heads.join(', ')}"><table><thead><tr>${heads.map(h=>`<th scope="col">${h}</th>`).join('')}</tr></thead><tbody>${rows.map(r=>`<tr>${r.map((v,i)=>i?`<td>${v}</td>`:`<th scope="row">${v}</th>`).join('')}</tr>`).join('')}</tbody></table></div>`;
 const note=t=>`<aside class="research-note">${t}</aside>`;
@@ -14,14 +14,14 @@ section('brief','THESIS','Do orbital data centers win out over the next 50 years
 <p class="thesis-condition">The test: repair and chip upgrades must cost less than redundancy or spacecraft replacement.</p></div>
 </div>
 <div class="key-points" role="list" aria-label="Key numbers">
-<a role="listitem" href="#infrastructure/demand"><strong>3.2 quadrillion</strong><span>tokens a month at Google in 2026, up from 9.7 trillion two years earlier</span></a>
-<a role="listitem" href="#infrastructure/parity"><strong>3×</strong><span>orbital deployment cost versus the ground today</span></a>
-<a role="listitem" href="#infrastructure/parity"><strong>2037 / 2044</strong><span>parity at a 9.7% or 6% yearly relative cost decline</span></a>
-<a role="listitem" href="#infrastructure/reality"><strong>14–19%</strong><span>market odds of a 1 MW orbital data center before 2029</span></a>
-<a role="listitem" href="#infrastructure/repair"><strong>10×</strong><span>less refresh mass when swapping cartridges instead of whole nodes</span></a>
-<a role="listitem" href="#infrastructure/inventory"><strong>~90%</strong><span>of platform mass kept on every chip swap</span></a>
-<a role="listitem" href="#infrastructure/inventory"><strong>10 MW</strong><span>scale at which the reference architecture adds a dedicated servicer</span></a>
-<a role="listitem" href="#infrastructure/repair"><strong>$7k–45k</strong><span>per robot-hour gross budget before repair stops paying</span></a>
+<a role="listitem" href="#orbital-economy/demand"><strong>3.2 quadrillion</strong><span>tokens a month at Google in 2026, up from 9.7 trillion two years earlier</span></a>
+<a role="listitem" href="#orbital-economy/parity"><strong>3×</strong><span>orbital deployment cost versus the ground today</span></a>
+<a role="listitem" href="#orbital-economy/parity"><strong>2037 / 2044</strong><span>parity at a 9.7% or 6% yearly relative cost decline</span></a>
+<a role="listitem" href="#orbital-economy/reality"><strong>14–19%</strong><span>market odds of a 1 MW orbital data center before 2029</span></a>
+<a role="listitem" href="#orbital-economy/repair"><strong>10×</strong><span>less refresh mass when swapping cartridges instead of whole nodes</span></a>
+<a role="listitem" href="#orbital-economy/inventory"><strong>~90%</strong><span>of platform mass kept on every chip swap</span></a>
+<a role="listitem" href="#orbital-economy/inventory"><strong>10 MW</strong><span>scale at which the reference architecture adds a dedicated servicer</span></a>
+<a role="listitem" href="#orbital-economy/repair"><strong>$7k–45k</strong><span>per robot-hour gross budget before repair stops paying</span></a>
 </div>
 <p>We start with whether orbital data centers win out. Then we ask three questions: will enough exist, will repair cost less, and will maintenance become viable before other space-to-space services?</p>
 <p class="microcopy">By “space-only,” we mean customers’ assets are in space; the companies paying can be on Earth. By “self-sustaining,” we mean recurring customer revenue covers operations and replacement capital without recurring subsidy.</p>`)+

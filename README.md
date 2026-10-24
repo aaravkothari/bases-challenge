@@ -36,7 +36,7 @@ sizes the iframe to its content.
 The Microgravity & medicine tab, section 04, embeds the stem-cell cost calculator from `dist/calculator/`: `pitch.html?embed=1&theme=dark&skin=bagel` is the four-step Earth vs space comparison shown in the iframe (`engine.js` holds the formulas, `scenario_data.js` the inputs, `skin-bagel.css` the site styling). The iframe resizes to its content (`mountCalculator` in `dist/app.js`).
 
 ## Navigation and printing
-Tabs and sections use hash URLs, e.g. `#economy/calculator`. Browser back/forward works. Print Research prints the current tab's content; switch tabs to print another chapter. The Research tab displays the working Google Doc directly.
+Tabs and sections use hash URLs, e.g. `#medicine/economics`. Browser back/forward works. Print Research prints the current tab's content; switch tabs to print another chapter. The Research tab displays the working Google Doc directly.
 
 ## Tab 1: zero launch cost industry feasibility
 
