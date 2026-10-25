@@ -49,6 +49,9 @@ const tierList=()=>`<div class="tier-list">${TIERS.map(([cls,id,name,meaning,ite
  `<div class="tier-row ${cls}"><div><span class="tier-id">TIER ${id}</span><span class="tier-name">${name}</span><span class="tier-meaning">${meaning}</span></div><div class="tier-chips">${items.map(x=>Array.isArray(x)?`<span class="chip star">★ ${x[0]}</span>`:`<span class="chip">${x}</span>`).join('')}</div></div>`).join('')}</div>`;
 
 export function industries(){return `<article class="research-walkthrough industry-walkthrough">`+
+section('pitch','THE PITCH · BAGEL BROS','Watch our pitch',`
+<p class="research-deck">Our answers to Space questions 1 and 2, in under ten minutes.</p>
+<figure class="pitch-video"><video controls playsinline preload="metadata" poster="assets/pitch-poster.jpg" aria-label="Bagel Bros pitch video"><source src="assets/pitch.mp4" type="video/mp4"></video><figcaption>Swayam, Neev, Manas, Vedant and Aarav · 9:47 · <a href="assets/pitch.mp4">Download the video</a></figcaption></figure>`)+
 
 section('premise','QUESTION 1 · THE QUESTION','What opens when launch is free?',`
 <p class="research-deck">Tomorrow, launching mass to orbit becomes effectively free. What industries become possible, and which still don’t make sense?</p>

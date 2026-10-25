@@ -53,3 +53,6 @@
 @media print{.key-points{background:#fff;border-color:#aaa}.key-points>a{background:#fff}.key-points strong{color:#164b38}.key-points span{color:#333}.research-walkthrough .research-section strong{color:#111}.research-walkthrough .research-section p.callout{color:#111}}
 
 .robot-case-study{margin-top:40px;padding-top:30px;border-top:1px solid #293541}.robot-video-moonlake video{aspect-ratio:8/5;object-fit:contain}
+
+.pitch-video{margin:10px 0 0;border:1px solid #35414d;padding:12px;background:#080b0f}.pitch-video video{display:block;width:100%;height:auto;aspect-ratio:16/9;background:#040608}.pitch-video figcaption{padding:12px 4px 0;font-size:15px;color:#a8b4bf}.pitch-video figcaption a{color:#b9d9ef;text-decoration:underline;text-underline-offset:3px}
+@media print{.pitch-video video{display:none}}
